@@ -1,23 +1,20 @@
 import tkinter as tk
-from math import *
 
 size = 10
 teams = ["red", "yellow", "black", "green"]
-global Days
-global Clicks
-global listofmoves
 listofmoves = []
 Clicks = []
 Days = -0.5
 
 
-class Piece():
+class Piece:
     def __init__(self, name, team, x, y):
         self.name = name
         self.team = team
         self.set_cords(x, y)
         self.speed_boost = 0
         self.power_boost = 0
+        self.x, self.y = None, None
 
     def set_cords(self, x, y):
         self.x = x
